@@ -39,10 +39,10 @@ jobs:
         uses: docker/login-action@v2
         with:
           username: Nava200
-          password: ${{ secrets.PTA }}  # Use the correct case-sensitive secret name
+          password: ${{ secrets.PTA }}
           registry: ghcr.io
 
       - name: Tag and push Docker image
         run: |
-          docker tag go-app:latest ghcr.io/Nava200/go-app:latest
-          docker push ghcr.io/Nava200/go-app:latest
+          docker tag go-app:latest ghcr.io/nava200/go-app:latest  # Updated to lowercase
+          docker push ghcr.io/nava200/go-app:latest  # Updated to lowercase
